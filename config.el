@@ -36,7 +36,7 @@
 ;;(setq doom-font (font-spec :family "JetBrainsMonoNL Nerd Font" :size 19 :weight 'light))
 ;;(setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 26 :weight 'regular))
 ;;(setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 18 :weight 'regular))
-(setq doom-font (font-spec :family "JetBrainsMonoNL Nerd Font" :size 15 :weight 'semi-light))
+(setq doom-font (font-spec :family "JetBrainsMonoNL Nerd Font" :size 19 :weight 'semi-light))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -47,8 +47,11 @@
 ;(setq doom-theme 'ef-theme-melissa-dark
       doom-themes-treemacs-theme 'doom-colors)
 
-(use-package! doom-themes
-  :config
+;; (use-package! doom-themes
+;;   :config
+;;   (ef-themes-select 'ef-melissa-light))
+
+(after! doom-themes
   (ef-themes-select 'ef-melissa-light))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
