@@ -36,7 +36,8 @@
 ;;(setq doom-font (font-spec :family "JetBrainsMonoNL Nerd Font" :size 19 :weight 'light))
 ;;(setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 26 :weight 'regular))
 ;;(setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 18 :weight 'regular))
-(setq doom-font (font-spec :family "JetBrainsMonoNL Nerd Font" :size 19 :weight 'semi-light))
+;;(setq doom-font (font-spec :family "JetBrainsMonoNL Nerd Font" :size 15 :weight 'semi-light))
+(setq doom-font (font-spec :family "JetBrainsMonoNL NF" :size 17 :weight 'regular))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the

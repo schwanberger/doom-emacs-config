@@ -45,6 +45,7 @@
   (map!
    :map vterm-mode-map
    :i "C-r" #'vterm--self-insert
+   :i "C-a" #'vterm--self-insert
    "M-1" #'+workspace/switch-to-0
    "M-2" #'+workspace/switch-to-1
    "M-3" #'+workspace/switch-to-2
