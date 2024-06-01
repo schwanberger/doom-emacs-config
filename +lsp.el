@@ -53,7 +53,3 @@
   :config
   (treesit-auto-add-to-auto-mode-alist 'all)
   (global-treesit-auto-mode))
-
-(add-hook! (go-ts-mode) (eglot-ensure))
-
-; LSP2
