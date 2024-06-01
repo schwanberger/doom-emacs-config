@@ -76,7 +76,7 @@ use bash as default shell."
   (interactive)
   (if
       (file-remote-p default-directory)
-      (let ((vterm-shell "/bin/bash"))
+      (let ((vterm-shell "/bin/bash -i"))
         (vterm (generate-new-buffer-name (format "vterm %s" (concat (concat (file-remote-p default-directory 'user) "_" (file-remote-p default-directory 'host) "___" (sha1 (format "%s" (current-time)))))))))
     (let ((vterm-shell (locate-file "bash" exec-path)))
       (vterm (generate-new-buffer-name (format "vterm %s" (concat (format "%s" (read-from-minibuffer "Name: "))))))))
