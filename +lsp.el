@@ -49,7 +49,7 @@
    lsp-ui-doc-header t))
 
 (use-package! treesit-auto
-  :defer-incrementally t
+  ;:defer-incrementally t
   :config
   (treesit-auto-add-to-auto-mode-alist 'all)
   (global-treesit-auto-mode))
