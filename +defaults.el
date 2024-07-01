@@ -125,21 +125,10 @@
 ;; BEGIN --- From https://github.com/elken/doom
 (global-subword-mode 1)
 ;;(add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
-(after! evil
-  (setq evil-kill-on-visual-paste nil)
-  (setq evil-disable-insert-state-bindings t)
-  )
-
-;; (use-package! eshell-p10k
-;;   :after eshell
-;;   :config
-;;   (setq eshell-prefer-lisp-functions t)
-;;   (setq eshell-prompt-function #'eshell-p10k-prompt-function
-;;         eshell-prompt-regexp eshell-p10k-prompt-string))
-
-(after! eshell
-  ; eshell lisp functions are cross platform.
-  (setq eshell-prefer-lisp-functions t))
+;; (after! evil
+;;   (setq evil-kill-on-visual-paste nil)
+;;   (setq evil-disable-insert-state-bindings t)
+;;   )
 
 (after! vterm
   (define-key vterm-mode-map (kbd "<C-backspace>") (lambda () (interactive) (vterm-send-key (kbd "C-w")))))

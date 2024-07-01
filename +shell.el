@@ -19,7 +19,7 @@
 ;;
 ;;; Code:
 
-(add-hook! (shell-mode eshell-mode) (persp-add-buffer (current-buffer)))
+(add-hook! (shell-mode) (persp-add-buffer (current-buffer)))
 
 (use-package! vterm
   :defer-incrementally t
@@ -112,52 +112,6 @@ use bash as default shell."
   (auto-save-mode)
   (comint-simple-send (current-buffer) "export PS1='[\\u@\\h \\W] \\D{%F %T}\n $ '"))
 
-(after! eshell
-  (add-to-list 'eshell-modules-list 'eshell-elecslash)
-  (remove-hook! '(eshell-mode-hook) #'hide-mode-line-mode)
-  ;; (map! :map eshell-command-mode-map
-  ;;       "C-s"   #'consult-history
-  ;;       "C-c C-p" #'+thsc/paste-from-minibuffer
-  ;;       (:localleader
-  ;;        "b" #'eshell-insert-buffer-name
-  ;;        "e" #'eshell-insert-envvar
-  ;;        "s" #'consult-history))
-  )
-
-
-
-
-
-(after! esh-mode
-  (map! :map eshell-mode-map
-        :ni "C-s"     #'consult-history
-        :ni "C-c C-p" #'+thsc/paste-from-minibuffer
-        (:localleader
-         "b" #'eshell-insert-buffer-name
-         "e" #'eshell-insert-envvar
-         "p" #'+thsc/paste-from-minibuffer
-         "s" #'consult-history)))
-
-
-
-
-
-
-
-
-
-
-
-
-;; (after! esh-mode
-;;   (map! :map eshell-mode-map
-;;         "C-s"   #'consult-history
-;;         "C-c C-p" #'+thsc/paste-from-minibuffer
-;;         (:localleader
-;;          "b" #'eshell-insert-buffer-name
-;;          "e" #'eshell-insert-envvar
-;;          "s" #'consult-history)))
-
 (after! shell
   (remove-hook! '(shell-mode-hook) #'hide-mode-line-mode)
   (map!
@@ -167,19 +121,6 @@ use bash as default shell."
         (:localleader
          "p" #'+thsc/paste-from-minibuffer
          "s" #'consult-history)))
-
-(defun +thsc/eshell ()
-  "Setup eshell buffer and open it in default directory."
-  (interactive)
-  (let* ((remote-hostname (file-remote-p default-directory 'host))
-         (eshell-buffer-hostname (if remote-hostname remote-hostname (system-name)))
-         (eshell-buffer-name-local (concat "eshell_" eshell-buffer-hostname "__" (sha1 (format "%s" (current-time))))))
-    (with-temp-buffer
-      (setq-local eshell-buffer-name eshell-buffer-name-local)
-      (eshell)
-      (auto-save-mode)
-      ;; (do-auto-save)
-      )))
 
 (provide '+shell)
 ;;; +shell.el ends here

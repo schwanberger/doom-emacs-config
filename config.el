@@ -104,5 +104,8 @@
 (load! "+autosave")
 (load! "+defaults")
 (load! "+lsp")
+; (load! "+eshell")
+(load! "+eshellt")
+(user/eshell-layer)
 
 ; Comment

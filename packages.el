@@ -111,3 +111,13 @@
 ;(package! tree-sitter-langs :built-in t) ; Let nix handle this due to binary deps on grammars
 (package! eglot :built-in t) ; Get latest via nix (or fallback to emacs 29.x version)
 (package! vterm :built-in t) ; Get latest via nix (or fallback to emacs 29.x version)
+
+; 2024-06-18 Custom eshell module (+eshell.el):
+(package! eshell :built-in 'prefer)
+(package! eshell-prompt-extras :built-in 'prefer)
+(package! esh-autosuggest :built-in 'prefer)
+(package! fish-completion :built-in 'prefer)
+(package! esh-help :built-in 'prefer)
+(package! eshell-syntax-highlighting :built-in 'prefer)
+(package! eat :built-in 'prefer)
+(package! org-yt :disable t)
