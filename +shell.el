@@ -27,9 +27,10 @@
   (setq vterm-kill-buffer-on-exit nil
         vterm-timer-delay 0.01)
   (add-hook! (shell-mode vterm-mode) (corfu-mode -1)) ;; auto-completion for vterm buffers should be handled by the shell
-  ;; (custom-set-faces!
-  ;;   `(vterm-color-bright-black :foreground ,(doom-color 'comments)) ;; Fix zsh-autosuggestions being invisible in vterm buffers.
-  ;;   `(vterm-color-bright-black :background ,(doom-color 'comments))) ;; Fix some (rare) ansible output being invisible in  vterm buffers.
+  (custom-set-faces!
+    `(vterm-color-bright-black :foreground ,(doom-color 'comments)) ;; Fix zsh-autosuggestions being invisible in vterm buffers.
+  ;;   `(vterm-color-bright-black :background ,(doom-color 'comments)) ;; Fix some (rare) ansible output being invisible in  vterm buffers.
+  )
   (remove-hook! '(vterm-mode-hook) #'hide-mode-line-mode))
 
 (after! vterm
