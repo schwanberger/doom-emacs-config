@@ -24,6 +24,11 @@
       ;;battery-mode-line-format "[%b%p\%] "
       ;;battery-mode-line-format "[%b] "
       ;;company-idle-delay nil
+      ;;; vvv from https://github.com/alexispurslane/quake-emacs/blob/main/init.el
+      ; jit-lock-stealth-time 0.2
+      ; jit-lock-defer-time 0.0
+      ; jit-lock-context-time 0.2
+      ; jit-lock-stealth-load 200
       )
 
 (display-battery-mode 1)                          ; Show battery, not useful if not laptop
