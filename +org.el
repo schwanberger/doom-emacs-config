@@ -130,5 +130,10 @@
                              (directory-files-recursively (expand-file-name "~/org") ".org$" t)))
   )
 
+(defun set-progress-property-h (n-done n-not-done)
+  (org-set-property "PROGRESS" (concat "[" (number-to-string n-done) "/" (number-to-string (+ n-done n-not-done)) "]")))
+
+(add-hook 'org-after-todo-statistics-hook 'set-progress-property-h)
+
 (provide '+org)
 ;;; +org.el ends here
