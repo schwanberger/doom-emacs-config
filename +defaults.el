@@ -30,6 +30,10 @@
       ; jit-lock-context-time 0.2
       ; jit-lock-stealth-load 200
       )
+      ;;;;;; Optimize for long lines.
+      ;;;;;;
+(setq-default bidi-paragraph-direction 'left-to-right ; assume we're using LtR text unless explicitly told otherwise
+              bidi-inhibit-bpa t)                     ; turn off bidirectional paren display algorithm, it is expensive
 
 (display-battery-mode 1)                          ; Show battery, not useful if not laptop
 (display-time-mode 1)
