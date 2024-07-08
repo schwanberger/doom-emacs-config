@@ -45,7 +45,7 @@
 ;; `load-theme' function. This is the default:
 
 ;(setq doom-theme 'catppuccin
-(setq doom-theme 'doom-tokyo-night
+(setq doom-theme 'doom-vibrant
 ;(setq doom-theme 'ef-theme-melissa-dark
       doom-themes-treemacs-theme 'doom-colors)
 
@@ -53,8 +53,8 @@
 ;;   :config
 ;;   (ef-themes-select 'ef-melissa-light))
 
-(after! doom-themes
-  (ef-themes-select 'ef-melissa-light))
+;; (after! doom-themes
+;;   (ef-themes-select 'ef-melissa-light))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
