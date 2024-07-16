@@ -121,4 +121,3 @@
 (package! esh-help :built-in 'prefer)
 (package! eshell-syntax-highlighting :built-in 'prefer)
 (package! eat :built-in 'prefer)
-(package! org-yt :disable t) ; org-yt breaks something in the belly of recent org-mode versions
