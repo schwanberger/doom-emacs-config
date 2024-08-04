@@ -64,6 +64,10 @@
   ;;                (tramp-session-timeout 300)
   ;;                (tramp-password-previous-hop t))
   ;;              )
+  (add-to-list 'tramp-completion-function-alist
+               '("ssh"
+                 (tramp-parse-sconfig "~/.config/sops-nix/secrets/ssh_config_work")
+                 (tramp-parse-sconfig "~/.ssh/adhoc_config")))
   )
 
 (defun tramp-remote-dired (&optional arg)
