@@ -47,44 +47,23 @@
             "RADIUS challenge")
           t)
          ".*:\0? *"))
-  (defun thsc/oracle-file-path (file)
-    (let ((host (or (file-remote-p file 'host) "localhost")))
-      (concat "/" (when (file-remote-p file)
-                    (concat (file-remote-p file 'method) ":"
-                            (if-let (user (file-remote-p file 'user))
-                                (concat user "@" host)
-                              host)
-                            "|"))
-              "sudo:root@" "|" "su:oracle@" host
-              ":" (or (file-remote-p file 'localname)
-                      file))))
-  (defun thsc/oracle-shell-this ()
-    "Open shell as user oracle in this directory."
-    (interactive)
-    (if (string-match "su:oracle@" default-directory)
-        (+thsc/bash)
-      (let
-          ((default-directory (thsc/oracle-file-path default-directory)))
-        (+thsc/bash)))
-    (comint-simple-send (current-buffer) "export PS1='[\\u@\\h \\W] \\D{%F %T}\n(\$ORACLE_SID) $ '")
-    )
-  (add-to-list 'tramp-methods
-               '("isudo"
-                 (tramp-login-program "env")
-                 (tramp-login-args
-                  (
-                   ("sudo")
-                   ("-u" "%u")
-                   ("--login")))
-                 (tramp-remote-shell "/bin/bash")
-                 (tramp-remote-shell-login
-                  ("-l"))
-                 (tramp-remote-shell-args
-                  ("-c"))
-                 (tramp-connection-timeout 10)
-                 (tramp-session-timeout 300)
-                 (tramp-password-previous-hop t))
-               )
+  ;; (add-to-list 'tramp-methods
+  ;;              '("isudo"
+  ;;                (tramp-login-program "env")
+  ;;                (tramp-login-args
+  ;;                 (
+  ;;                  ("sudo")
+  ;;                  ("-u" "%u")
+  ;;                  ("--login")))
+  ;;                (tramp-remote-shell "/bin/bash")
+  ;;                (tramp-remote-shell-login
+  ;;                 ("-l"))
+  ;;                (tramp-remote-shell-args
+  ;;                 ("-c"))
+  ;;                (tramp-connection-timeout 10)
+  ;;                (tramp-session-timeout 300)
+  ;;                (tramp-password-previous-hop t))
+  ;;              )
   )
 
 (defun tramp-remote-dired (&optional arg)
