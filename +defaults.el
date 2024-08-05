@@ -25,10 +25,10 @@
       ;;battery-mode-line-format "[%b] "
       ;;company-idle-delay nil
       ;;; vvv from https://github.com/alexispurslane/quake-emacs/blob/main/init.el
-      ; jit-lock-stealth-time 0.2
-      ; jit-lock-defer-time 0.0
-      ; jit-lock-context-time 0.2
-      ; jit-lock-stealth-load 200
+                                        ; jit-lock-stealth-time 0.2
+                                        ; jit-lock-defer-time 0.0
+                                        ; jit-lock-context-time 0.2
+                                        ; jit-lock-stealth-load 200
       )
       ;;;;;; Optimize for long lines.
       ;;;;;;
@@ -272,7 +272,11 @@
   )
 
 (after! spell-fu
- (setq ispell-library-directory "/home/thsc/doomemacs-config/aspell/ispell"
-       spell-fu-directory "/home/thsc/doomemacs-config/aspell/ispell"
-       ispell-personal-dictionary "/home/thsc/doomemacs-config/aspell/ispell/.pws"
-       ))
+  (setq ispell-library-directory "/home/thsc/doomemacs-config/aspell/ispell"
+        spell-fu-directory "/home/thsc/doomemacs-config/aspell/ispell"
+        ispell-personal-dictionary "/home/thsc/doomemacs-config/aspell/ispell/.pws"
+        ))
+
+(use-package! pinentry
+  :config
+  (pinentry-start))

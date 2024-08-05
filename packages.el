@@ -121,3 +121,4 @@
 (package! esh-help :built-in 'prefer)
 (package! eshell-syntax-highlighting :built-in 'prefer)
 (package! eat :built-in 'prefer)
+(package! pinentry :built-in 'prefer)
