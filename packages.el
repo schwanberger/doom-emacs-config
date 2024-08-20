@@ -122,3 +122,6 @@
 (package! eshell-syntax-highlighting :built-in 'prefer)
 (package! eat :built-in 'prefer)
 (package! pinentry :built-in 'prefer)
+
+; git-commit vs magit pinning causing issues
+(package! git-commit :pin "cf94190410ef163fd102cdbcb67f28599d31eabc")
