@@ -124,4 +124,4 @@
 (package! pinentry :built-in 'prefer)
 
 ; git-commit vs magit pinning causing issues
-(package! git-commit :pin "cf94190410ef163fd102cdbcb67f28599d31eabc")
+; (package! git-commit :pin "55656a31cc4fe6c8996c621f4cf14aa4a1bfe47d")
