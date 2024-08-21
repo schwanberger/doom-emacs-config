@@ -34,11 +34,16 @@
 ;; (setq doom-font (font-spec :family "VictorMono Nerd Font" :size 14.0 :weight 'semibold))
 ;;(setq doom-font (font-spec :family "JetBrainsMonoNL Nerd Font" :size 14.0))
 ;;(setq doom-font (font-spec :family "JetBrainsMonoNL Nerd Font" :size 19 :weight 'light))
-;;(setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 26 :weight 'regular))
+;; (setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 11.0 :weight 'regular))
 ;;(setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 18 :weight 'regular))
 ;;(setq doom-font (font-spec :family "JetBrainsMonoNL Nerd Font" :size 15 :weight 'semi-light))
-(setq doom-font (font-spec :family "JetBrainsMonoNL NF" :size 11.0 :weight 'regular))
+;; (setq doom-font (font-spec :family "JetBrainsMonoNL NF" :size 11.0 :weight 'semi-light))
 ;; (setq doom-font (font-spec :family "VictorMono Nerd Font" :size 15 :weight 'semi-bold))
+;;(setq doom-font (font-spec :family "MesloLGMDZ Nerd Font Mono" :size 11.0 :weight 'regular))
+;;(setq doom-font (font-spec :family "RobotoMono Nerd Font Mono" :size 11.0 :weight 'regular))
+;;(setq doom-font (font-spec :family "FiraMono Nerd Font Mono" :size 11.0 :weight 'regular))
+;; (setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 11.0 :weight 'light))
+ (setq doom-font (font-spec :family "JetBrainsMonoNL Nerd Font Mono" :size 11.0))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
