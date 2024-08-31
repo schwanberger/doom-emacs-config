@@ -45,6 +45,12 @@
 ;; (setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 11.0 :weight 'light))
  ;(setq doom-font (font-spec :family "JetBrainsMonoNL Nerd Font Mono" :size 11.0))
 
+;(setq doom-font (font-spec :family "Iosevka Comfy Motion Fixed" :size 14.0))
+;(setq doom-font (font-spec :family "Iosevka Comfy Fixed" :size 14.0))
+
+;(setq doom-font (font-spec :family "Iosevka Comfy Motion Fixed"))
+;(setq doom-font (font-spec :family "Iosevka Comfy Fixed"))
+
 (set-face-attribute 'default nil :height 135)
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
