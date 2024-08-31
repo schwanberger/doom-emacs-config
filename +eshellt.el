@@ -133,11 +133,11 @@ Loads:
     (use-package esh-autosuggest
         :hook (eshell-mode . esh-autosuggest-mode))
 
-    (use-package fish-completion
-        :after (eshell)
-        :config
-        (when (executable-find "fish")
-            (global-fish-completion-mode)))
+    (use-package! fish-completion
+      :unless (featurep :system 'windows)
+      :hook (eshell-mode . fish-completion-mode)
+      :init (setq fish-completion-prefer-bash-completion t
+                  fish-completion-inhibit-missing-fish-command-warning t))
 
     (use-package esh-help
         :after (eshell fish-completion)
