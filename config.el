@@ -122,5 +122,6 @@
 ; (load! "+eshell")
 (load! "+eshellt")
 (user/eshell-layer)
+(load! "+denote")
 
 ; Comment
