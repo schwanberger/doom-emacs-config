@@ -28,6 +28,14 @@
         org-gtd-default-file-name "actionable"
         org-edna-use-inheritance t)
   (org-edna-mode)
+  (add-to-list 'org-gtd-capture-templates
+                 '("n" "New note (with denote.el)" plain
+                   (file denote-last-path)
+                   #'denote-org-capture
+                   :no-save t
+                   :immediate-finish nil
+                   :kill-buffer t
+                   :jump-to-captured t))
   (map! :leader
         (:prefix ("d" . "org-gtd")
          :desc "Capture"        "c"  #'org-gtd-capture
