@@ -126,5 +126,7 @@
 (package! denote :built-in 'prefer)
 (package! consult-notes :built-in 'prefer)
 
+(package! hyperbole :built-in 'prefer)
+
 ; git-commit vs magit pinning causing issues
 ; (package! git-commit :pin "55656a31cc4fe6c8996c621f4cf14aa4a1bfe47d")

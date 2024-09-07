@@ -280,3 +280,7 @@
 (use-package! pinentry
   :config
   (pinentry-start))
+
+(use-package! hyperbole
+  :config (hyperbole-mode 1)
+  )
