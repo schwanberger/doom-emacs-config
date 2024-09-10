@@ -64,16 +64,16 @@
   ;;                                                                                                  (TODO "NEXT")))))))
   (add-to-list 'org-agenda-custom-commands '("d" "Items scheduled up to today" (
                                                                                        (agenda "" ((org-agenda-span 1)
-                                                                                                   (org-deadline-warning-days 0)
+                                                                                                   ; (org-deadline-warning-days 0)
                                                                                                    (org-agenda-files '("~/org/gtd/actionable.org" "~/org/todo/new_todo.org" "~/org/private/practical.org" "~/org/gtd/inbox.org" "~/org/private/nerd.org"))
-                                                                                                   (org-scheduled-past-days 10000)
+                                                                                                   (org-scheduled-past-days 0)
                                                                                                    (TODO "NEXT"))))))
 
   (add-to-list 'org-agenda-custom-commands '("D" "Items scheduled today only" (
                                                                                        (agenda "" ((org-agenda-span 1)
-                                                                                                   (org-deadline-warning-days 0)
+                                                                                                   ; (org-deadline-warning-days 0)
                                                                                                    (org-agenda-files '("~/org/gtd/actionable.org" "~/org/todo/new_todo.org" "~/org/private/practical.org" "~/org/gtd/inbox.org" "~/org/private/nerd.org"))
-                                                                                                   (org-scheduled-past-days 0)
+                                                                                                   (org-scheduled-past-days 10000)
                                                                                                    (TODO "NEXT"))))))
 
   (add-to-list 'org-agenda-custom-commands '("p" "Items scheduled up to today for personal" (
