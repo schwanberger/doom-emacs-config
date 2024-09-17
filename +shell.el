@@ -60,10 +60,11 @@
 
 
 (defun +thsc/vterm ()
-  "Create vterm shell. If on remote server, give the buffer a relevant name and
+  "Name a vterm buffer and create it.
+If on remote server, give the buffer a relevant name and
 use bash as default shell."
-  (require 'vterm)
   (interactive)
+  (require 'vterm)
   (if
       (file-remote-p default-directory)
       (let ((vterm-shell "/bin/bash"))
@@ -72,10 +73,11 @@ use bash as default shell."
   (auto-save-mode))
 
 (defun +thsc/vterm-bash ()
-  "Create vterm shell. If on remote server, give the buffer a relevant name and
+  "Name a vterm buffer and create it.
+If on remote server, give the buffer a relevant name and
 use bash as default shell."
-  (require 'vterm)
   (interactive)
+  (require 'vterm)
   (if
       (file-remote-p default-directory)
       (let ((vterm-shell "/bin/bash -i"))
