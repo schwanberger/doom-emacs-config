@@ -85,7 +85,8 @@ use bash as default shell."
   (auto-save-mode))
 
 (defun +thsc/bash ()
-  "Opens a bash shell buffer with the given name. If it's a remote
+  "Opens a bash shell buffer with the given name.
+If it's a remote
      shell, a unique name will be created for it."
   (interactive)
 
