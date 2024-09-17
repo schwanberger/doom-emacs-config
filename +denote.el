@@ -25,6 +25,7 @@
                 denote-prompts '(title keywords)
                 denote-directory (expand-file-name "~/org/denote")
                 denote-backlinks-show-context t)
+           (require 'denote-journal-extras)
   )
 
 (use-package! consult-notes
