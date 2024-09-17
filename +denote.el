@@ -33,7 +33,7 @@
   :config
   (consult-notes-denote-mode 1)
   ;; search only for text files in denote dir
-  (setq consult-notes-denote-files-function (function denote-directory-text-only-files))
+  (setq consult-notes-denote-files-function (function denote-directory-files))
   )
 
 (after! denote
