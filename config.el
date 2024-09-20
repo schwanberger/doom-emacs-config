@@ -113,6 +113,8 @@
 
 ;; (require 'lsp-mode) ; 2024-03-25: Weird bug with lsp-mode, gotta be activated before entering golang buffer
 
+(setq-default buffer-file-coding-system 'utf-8-unix)
+
 (load! "+org")
 (load! "+tramp")
 (load! "+shell")
