@@ -80,28 +80,28 @@
                                                                                        (agenda "" ((org-agenda-span 1)
                                                                                                    (org-deadline-warning-days 0)
                                                                                                    (org-agenda-files '("~/org/private/practical.org" "~/org/private/nerd.org"))
-                                                                                                   (org-scheduled-past-days 10000)
+                                                                                                   (org-scheduled-past-days 0)
                                                                                                    (TODO "NEXT"))))))
 
   (add-to-list 'org-agenda-custom-commands '("P" "Items scheduled up to today for personal" (
                                                                                        (agenda "" ((org-agenda-span 1)
                                                                                                    (org-deadline-warning-days 0)
                                                                                                    (org-agenda-files '("~/org/private/practical.org" "~/org/private/nerd.org"))
-                                                                                                   (org-scheduled-past-days 0)
+                                                                                                   (org-scheduled-past-days 10000)
                                                                                                    (TODO "NEXT"))))))
 
   (add-to-list 'org-agenda-custom-commands '("w" "Items scheduled up to today for NC work" (
                                                                                        (agenda "" ((org-agenda-span 1)
                                                                                                    (org-deadline-warning-days 0)
                                                                                                    (org-agenda-files '("~/org/gtd/actionable.org" "~/org/todo/new_todo.org" "~/org/gtd/inbox.org"))
-                                                                                                   (org-scheduled-past-days 10000)
+                                                                                                   (org-scheduled-past-days 0)
                                                                                                    (TODO "NEXT"))))))
 
   (add-to-list 'org-agenda-custom-commands '("W" "Items scheduled today only for NC work" (
                                                                                        (agenda "" ((org-agenda-span 1)
                                                                                                    (org-deadline-warning-days 0)
                                                                                                    (org-agenda-files '("~/org/gtd/actionable.org" "~/org/todo/new_todo.org" "~/org/gtd/inbox.org"))
-                                                                                                   (org-scheduled-past-days 0)
+                                                                                                   (org-scheduled-past-days 10000)
                                                                                                    (TODO "NEXT")))))))
 
 (after! org
