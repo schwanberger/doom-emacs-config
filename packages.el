@@ -129,5 +129,7 @@
 (package! hyperbole :built-in 'prefer)
 (package! standard-themes :built-in 'prefer)
 
+(package! 2048-game)
+
 ; git-commit vs magit pinning causing issues
 ; (package! git-commit :pin "55656a31cc4fe6c8996c621f4cf14aa4a1bfe47d")
