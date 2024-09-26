@@ -111,8 +111,7 @@
         ;; Require braces to make org consider_{this} or^{this} as subscript or superscript
         org-use-sub-superscripts t
         org-export-with-sub-superscripts '{}
-        org-agenda-tags-column 'auto
-        org-log-into-drawer t)
+        org-agenda-tags-column 'auto)
            ;;; Clocking
   ;; Resume clocking task when emacs is restarted
   (org-clock-persistence-insinuate)
@@ -122,9 +121,9 @@
    ;; Resume clocking task on clock-in if the clock is open
    org-clock-in-resume t
    ;; Separate drawers for clocking and logs
-   org-drawers (quote ("PROPERTIES" "LOGBOOK"))
+   org-drawers (quote ("PROPERTIES" "LOGBOOK" "CLOCKLOG"))
    ;; Save clock data and state changes and notes in the LOGBOOK drawer
-   org-clock-into-drawer t
+   org-clock-into-drawer "CLOCKLOG"
    ;; Sometimes I change tasks I'm clocking quickly - this removes clocked tasks with 0:00 duration
    org-clock-out-remove-zero-time-clocks t
    ;; Cl!ock out when moving task to a done state
