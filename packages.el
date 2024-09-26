@@ -123,6 +123,7 @@
 (package! eshell-syntax-highlighting :built-in 'prefer)
 (package! eat :built-in 'prefer)
 (package! pinentry :built-in 'prefer)
+(package! capf-autosuggest)
 
 (package! denote :built-in 'prefer)
 (package! consult-notes :built-in 'prefer)
@@ -131,6 +132,9 @@
 (package! standard-themes :built-in 'prefer)
 
 (package! 2048-game)
+
+
+
 
 ; git-commit vs magit pinning causing issues
 ; (package! git-commit :pin "55656a31cc4fe6c8996c621f4cf14aa4a1bfe47d")

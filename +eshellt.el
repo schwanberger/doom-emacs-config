@@ -130,8 +130,11 @@ Loads:
               eshell-prompt-regexp "^[^λ]+ λ "
               eshell-prompt-function 'epe-theme-dakrone))
 
-    (use-package esh-autosuggest
-        :hook (eshell-mode . esh-autosuggest-mode))
+    ;; (use-package esh-autosuggest
+    ;;     :hook (eshell-mode . esh-autosuggest-mode))
+
+    (use-package capf-autosuggest
+        :hook (eshell-mode . capf-autosuggest-mode))
 
     (use-package! fish-completion
       :unless (featurep :system 'windows)
