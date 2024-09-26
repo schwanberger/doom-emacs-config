@@ -118,6 +118,7 @@
 (package! eshell-prompt-extras :built-in 'prefer)
 (package! esh-autosuggest :built-in 'prefer)
 (package! fish-completion :built-in 'prefer)
+(package! bash-completion)
 (package! esh-help :built-in 'prefer)
 (package! eshell-syntax-highlighting :built-in 'prefer)
 (package! eat :built-in 'prefer)
