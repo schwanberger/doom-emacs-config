@@ -126,7 +126,10 @@
    org-clock-into-drawer "CLOCKLOG"
    ;; Sometimes I change tasks I'm clocking quickly - this removes clocked tasks with 0:00 duration
    org-clock-out-remove-zero-time-clocks t
-   ;; Cl!ock out when moving task to a done state
+   ;; Log re-schedule and re-deadline
+   org-log-reschedule 'time
+   org-log-redeadline 'time
+   ;; Clock out when moving task to a done state
    org-clock-out-when-done t
    ;; Save the running clock and all clock history when exiting Emacs, load it on startup
    org-clock-persist t
