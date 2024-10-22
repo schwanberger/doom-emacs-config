@@ -72,6 +72,20 @@ use bash as default shell."
     (vterm (generate-new-buffer-name (format "vterm %s" (concat (format "%s" (read-from-minibuffer "Name: ")))))))
   (auto-save-mode))
 
+(defun +thsc/vterm-nu ()
+  "Name a vterm buffer and create it.
+If on remote server, give the buffer a relevant name and
+use bash as default shell."
+  (interactive)
+  (require 'vterm)
+  (if
+      (file-remote-p default-directory)
+      (let ((vterm-shell "/bin/bash -i"))
+        (vterm (generate-new-buffer-name (format "vterm %s" (concat (concat (file-remote-p default-directory 'user) "_" (file-remote-p default-directory 'host) "___" (sha1 (format "%s" (current-time)))))))))
+    (let ((vterm-shell (locate-file "nu" exec-path)))
+      (vterm (generate-new-buffer-name (format "vterm %s" (concat (format "%s" (read-from-minibuffer "Name: "))))))))
+  (auto-save-mode))
+
 (defun +thsc/vterm-bash ()
   "Name a vterm buffer and create it.
 If on remote server, give the buffer a relevant name and
