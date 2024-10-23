@@ -68,7 +68,7 @@ use bash as default shell."
   (if
       (file-remote-p default-directory)
       (let ((vterm-shell "/bin/bash"))
-        (vterm (generate-new-buffer-name (format "vterm %s" (concat (concat (file-remote-p default-directory 'user) "_" (file-remote-p default-directory 'host) "___" (sha1 (format "%s" (current-time)))))))))
+        (vterm (generate-new-buffer-name (format "vterm bash %s" (concat (concat (file-remote-p default-directory 'user) "_" (file-remote-p default-directory 'host) "___" (sha1 (format "%s" (current-time)))))))))
     (vterm (generate-new-buffer-name (format "vterm %s" (concat (format "%s" (read-from-minibuffer "Name: ")))))))
   (auto-save-mode))
 
@@ -81,9 +81,9 @@ use bash as default shell."
   (if
       (file-remote-p default-directory)
       (let ((vterm-shell "/bin/bash -i"))
-        (vterm (generate-new-buffer-name (format "vterm %s" (concat (concat (file-remote-p default-directory 'user) "_" (file-remote-p default-directory 'host) "___" (sha1 (format "%s" (current-time)))))))))
+        (vterm (generate-new-buffer-name (format "vterm bash %s" (concat (concat (file-remote-p default-directory 'user) "_" (file-remote-p default-directory 'host) "___" (sha1 (format "%s" (current-time)))))))))
     (let ((vterm-shell (locate-file "nu" exec-path)))
-      (vterm (generate-new-buffer-name (format "vterm %s" (concat (format "%s" (read-from-minibuffer "Name: "))))))))
+      (vterm (generate-new-buffer-name (format "vterm nushell %s" (concat (format "%s" (read-from-minibuffer "Name: "))))))))
   (auto-save-mode))
 
 (defun +thsc/vterm-bash ()
@@ -95,9 +95,9 @@ use bash as default shell."
   (if
       (file-remote-p default-directory)
       (let ((vterm-shell "/bin/bash -i"))
-        (vterm (generate-new-buffer-name (format "vterm %s" (concat (concat (file-remote-p default-directory 'user) "_" (file-remote-p default-directory 'host) "___" (sha1 (format "%s" (current-time)))))))))
+        (vterm (generate-new-buffer-name (format "vterm bash %s" (concat (concat (file-remote-p default-directory 'user) "_" (file-remote-p default-directory 'host) "___" (sha1 (format "%s" (current-time)))))))))
     (let ((vterm-shell (locate-file "bash" exec-path)))
-      (vterm (generate-new-buffer-name (format "vterm %s" (concat (format "%s" (read-from-minibuffer "Name: "))))))))
+      (vterm (generate-new-buffer-name (format "vterm bash %s" (concat (format "%s" (read-from-minibuffer "Name: "))))))))
   (auto-save-mode))
 
 (defun +thsc/bash ()
