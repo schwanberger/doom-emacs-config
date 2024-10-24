@@ -130,6 +130,7 @@
 
 (package! hyperbole :built-in t)
 (package! standard-themes :built-in t)
+(package! evil :built-in t)
 
 (package! 2048-game)
 
