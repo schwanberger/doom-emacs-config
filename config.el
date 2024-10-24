@@ -121,7 +121,7 @@
 (load! "+autosave")
 (load! "+defaults")
 (load! "+lsp")
-; (load! "+eshell")
+(load! "+eshell")
 ; (load! "+eshellt")
 ; (user/eshell-layer)
 (load! "+denote")
