@@ -79,5 +79,10 @@ With prefix argument, get a sudo shell."
 (use-package! esh-autosuggest
   :hook (eshell-mode . esh-autosuggest-mode))
 
+(use-package! eat
+  :config
+  (add-hook 'eshell-load-hook #'eat-eshell-mode)
+  (add-hook 'eshell-load-hook #'eat-eshell-visual-command-mode))
+
 (provide '+eshell)
 ;;; +eshell.el ends here
