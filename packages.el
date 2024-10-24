@@ -125,11 +125,11 @@
 (package! pinentry :built-in 'prefer)
 (package! capf-autosuggest)
 
-(package! denote :built-in 'prefer)
-(package! consult-notes :built-in 'prefer)
+(package! denote :built-in t)
+(package! consult-notes :built-in t)
 
-(package! hyperbole :built-in 'prefer)
-(package! standard-themes :built-in 'prefer)
+(package! hyperbole :built-in t)
+(package! standard-themes :built-in t)
 
 (package! 2048-game)
 
