@@ -76,5 +76,8 @@ With prefix argument, get a sudo shell."
       (eshell remote-host)
       (auto-save-mode))))
 
+(use-package! esh-autosuggest
+  :hook (eshell-mode . esh-autosuggest-mode))
+
 (provide '+eshell)
 ;;; +eshell.el ends here
