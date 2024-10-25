@@ -55,6 +55,14 @@
       (auto-save-mode)
       ;; (do-auto-save)
       )))
+
+(defun +thsc/ensure-ssh-key ()
+  "Add current SSH key defined in env var SSH_KEY to ssh-agent."
+  (let* ((command (format "ssh-add - <%s" (getenv "SSH_KEY")))
+         (exit-code (shell-command command)))
+    (when (/= exit-code 0)
+      (signal 'error (list (format "Failed to add SSH key at to agent with command: %s" command))))))
+
 (defun +thsc/eshell-remote-open (&optional arg)
   "Prompt for a remote host to connect to (ARG), and open a shell there.
 With prefix argument, get a sudo shell."
@@ -70,6 +78,7 @@ With prefix argument, get a sudo shell."
        (remote-host (completing-read "Remote host: " hosts))
        (eshell-buffer-name-local (concat "eshell_" remote-host "___" (sha1 (format "%s" (current-time)))))
        )
+    (+thsc/ensure-ssh-key)
     (with-temp-buffer
       (cd (concat "/" (or tramp-default-method "ssh") ":" remote-host ":"))
       (setq-local eshell-buffer-name eshell-buffer-name-local)
