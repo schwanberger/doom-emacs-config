@@ -88,7 +88,11 @@ With prefix argument, get a sudo shell."
 (use-package! esh-autosuggest
   :hook (eshell-mode . esh-autosuggest-mode))
 
+(after! eshell
+  (setq eshell-syntax-highlighting-highlight-in-remote-dirs nil))
+
 (use-package! eat
+  :after eshell
   :config
   (add-hook 'eshell-load-hook #'eat-eshell-mode)
   (add-hook 'eshell-load-hook #'eat-eshell-visual-command-mode))
