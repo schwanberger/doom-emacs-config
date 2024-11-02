@@ -86,16 +86,22 @@ With prefix argument, get a sudo shell."
       (auto-save-mode))))
 
 (use-package! esh-autosuggest
-  :hook (eshell-mode . esh-autosuggest-mode))
+  :hook ((eshell-mode . esh-autosuggest-mode)))
 
 (after! eshell
   (setq eshell-syntax-highlighting-highlight-in-remote-dirs nil))
 
 (use-package! eat
-  :after eshell
+  :hook ((eshell-load . eat-eshell-mode)))
+
+(use-package! fish-completion
+  :after (eshell)
   :config
-  (add-hook 'eshell-load-hook #'eat-eshell-mode)
-  (add-hook 'eshell-load-hook #'eat-eshell-visual-command-mode))
+  (setq fish-completion-prefer-bash-completion t)
+  (add-hook 'eshell-mode-hook
+          (lambda ()
+            (add-hook 'completion-at-point-functions
+                      'bash-completion-capf-nonexclusive nil t))))
 
 (provide '+eshell)
 ;;; +eshell.el ends here
