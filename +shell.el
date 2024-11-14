@@ -86,6 +86,15 @@ use bash as default shell."
       (vterm (generate-new-buffer-name (format "vterm nushell %s" (concat (format "%s" (read-from-minibuffer "Name: "))))))))
   (auto-save-mode))
 
+; This does not work well yet 2024-11-15
+(defun +thsc/vterm-nu-windows ()
+  "Create a vterm buffer for nu windows and name it."
+  (interactive)
+  (require 'vterm)
+  (let ((vterm-shell "/mnt/c/Users/thsc/AppData/Local/Programs/nu/bin/nu.exe --login --interactive"))
+    (vterm (generate-new-buffer-name (format "vterm nushell windows %s" (concat (format "%s" (read-from-minibuffer "Name: ")))))))
+  (auto-save-mode))
+
 (defun +thsc/vterm-bash ()
   "Name a vterm buffer and create it.
 If on remote server, give the buffer a relevant name and
