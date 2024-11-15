@@ -115,6 +115,8 @@
 
 (setq-default buffer-file-coding-system 'utf-8-unix)
 
+(setq read-process-output-max (* 1024 1024)) ;; 1mb - default is too low
+
 (load! "+org")
 (load! "+tramp")
 (load! "+shell")
