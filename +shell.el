@@ -72,6 +72,12 @@ use bash as default shell."
     (vterm (generate-new-buffer-name (format "vterm %s" (concat (format "%s" (read-from-minibuffer "Name: ")))))))
   (auto-save-mode))
 
+(defun +thsc/eat-nu ()
+  (interactive)
+  (let ((eat-buffer-name (generate-new-buffer-name (format "eat-nu %s" (concat (format "%s" (read-from-minibuffer "Name: ")))))))
+    (eat (locate-file "nu" exec-path)))
+  (auto-save-mode))
+
 (defun +thsc/vterm-nu ()
   "Name a vterm buffer and create it.
 If on remote server, give the buffer a relevant name and
