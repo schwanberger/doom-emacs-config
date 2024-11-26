@@ -78,6 +78,12 @@ use bash as default shell."
     (eat (locate-file "nu" exec-path)))
   (auto-save-mode))
 
+(defun +thsc/remote-eat-bash ()
+  (interactive)
+  (let ((eat-buffer-name (generate-new-buffer-name (format "vterm bash %s" (concat (concat (file-remote-p default-directory 'user) "_" (file-remote-p default-directory 'host) "___" (sha1 (format "%s" (current-time)))))))))
+    (eat "/bin/bash"))
+  (auto-save-mode))
+
 (defun +thsc/vterm-nu ()
   "Name a vterm buffer and create it.
 If on remote server, give the buffer a relevant name and
